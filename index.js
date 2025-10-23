@@ -7,6 +7,9 @@ const port = 8000;
 const mainRoutes = require("./routes/main");
 app.use('/', mainRoutes);
 
+// serve static files using CSS
+app.use(express.static(__dirname));
+
 
 //Start listening for HTTP requests 
 app.listen(port, 
